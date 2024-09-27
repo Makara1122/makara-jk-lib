@@ -16,5 +16,6 @@ class Frontend {
             npm install
             npm run build
         """
+    
     }
 }
