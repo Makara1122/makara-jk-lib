@@ -31,7 +31,7 @@ pipeline {
                     echo "Detected project type: ${env.PROJECT_TYPE}"
                 }
 
-                
+
 
             }
 
@@ -58,20 +58,20 @@ pipeline {
         // }
         // Uncomment and adjust the following sections as needed
         
-        // stage('Run Tests') {
-        //     // when {
-        //     //     expression { env.PROJECT_TYPE == 'desiredType' } // Replace 'desiredType' with your actual condition
-        //     // }
-        //     steps {
-        //         script {
-        //             // runTests(PROJECT_TYPE)
-        //             sh '''
-        //             node --version
-        //             '''
-        //         }
-        //     }
+        stage('Run Tests') {
+            // when {
+            //     expression { env.PROJECT_TYPE == 'desiredType' } // Replace 'desiredType' with your actual condition
+            // }
+            steps {
+                script {
+                    // runTests(PROJECT_TYPE)
+                    sh '''
+                    npm install
+                    '''
+                }
+            }
 
-        // }
+        }
 
 
         /*
