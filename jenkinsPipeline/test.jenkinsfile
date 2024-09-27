@@ -60,7 +60,7 @@ pipeline {
             steps {
                 script {
                     // runTests(PROJECT_TYPE)
-                    node -v
+                    sh 'node -v'
                 }
             }
 
