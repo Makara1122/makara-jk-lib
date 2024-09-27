@@ -6,11 +6,11 @@ pipeline {
     //     nodejs 'node-22-9-0'  // Use the Node.js installation configured in Jenkins
     // }
     stages {
-        // stage('Checkout Code') {
-        //     steps {
-        //         git branch: 'main', url: 'https://github.com/MuyleangIng/docs-automatex.git'
-        //     }
-        // }
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/MuyleangIng/docs-automatex.git'
+            }
+        }
         // stage('Check Node Version') {
         //     steps {
         //         sh 'node --version'
