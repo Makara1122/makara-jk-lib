@@ -11,11 +11,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/MuyleangIng/docs-automatex.git'
             }
         }
-        stage('Check Node Version') {
-            steps {
-                sh 'node --version'
-            }
-        }
+        // stage('Check Node Version') {
+        //     steps {
+        //         sh 'node --version'
+        //     }
+        // }
         stage('Determine Project Type') {
             steps {
                 script {
@@ -44,13 +44,13 @@ pipeline {
         //         }
         //     }
         // }
-        stage('Run Tests') {
-            steps {
-                sh '''
-                ls -lrt
-                '''
-            }
-        }
+        // stage('Run Tests') {
+        //     steps {
+        //         sh '''
+        //         ls -lrt
+        //         '''
+        //     }
+        // }
         // Uncomment and adjust the following sections as needed
         
         stage('Run Tests') {
@@ -63,7 +63,9 @@ pipeline {
                     runTests(PROJECT_TYPE)
                 }
             }
+            
         }
+
 
         /*
 
