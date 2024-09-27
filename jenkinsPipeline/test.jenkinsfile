@@ -30,7 +30,7 @@ pipeline {
                 }
             }
 
-            
+
         }
         // stage('Write Dockerfile') {
         //     steps {
@@ -52,17 +52,20 @@ pipeline {
         //     }
         // }
         // Uncomment and adjust the following sections as needed
-        /*
+        
         stage('Run Tests') {
-            when {
-                expression { env.PROJECT_TYPE == 'desiredType' } // Replace 'desiredType' with your actual condition
-            }
+            // when {
+            //     expression { env.PROJECT_TYPE == 'desiredType' } // Replace 'desiredType' with your actual condition
+            // }
             steps {
                 script {
+                    PROJECT_TYPE = checkProjectType()
                     runTests(env.PROJECT_TYPE)
                 }
             }
         }
+
+        /*
 
         stage('Build Project') {
             when {
