@@ -30,7 +30,9 @@ pipeline {
 
                     echo "Detected project type: ${env.PROJECT_TYPE}"
                 }
+
                 
+
             }
 
 
