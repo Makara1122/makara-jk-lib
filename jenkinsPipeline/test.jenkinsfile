@@ -18,7 +18,7 @@ pipeline {
         //     }
         // }
         stage('Determine Project Type') {
-            
+
             steps {
                 script {
                     // Call checkProjectType once and store the result in an environment variable
@@ -62,7 +62,9 @@ pipeline {
             steps {
                 script {
                     // runTests(PROJECT_TYPE)
-                    sh 'node -v'
+                    sh '''
+                    node --version
+                    '''
                 }
             }
 
