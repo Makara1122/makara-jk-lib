@@ -59,7 +59,7 @@ pipeline {
             // }
             steps {
                 script {
-                    PROJECT_TYPE = checkProjectType()
+                    env.PROJECT_TYPE = checkProjectType()
                     runTests(env.PROJECT_TYPE)
                 }
             }
